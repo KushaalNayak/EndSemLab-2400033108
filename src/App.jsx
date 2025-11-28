@@ -22,21 +22,23 @@ function App() {
   }, [students]);
 
   function addStudent() {
+    if (!sid || !sname || !scgpa || !sbacklogs) {
+      alert("Please fill all fields");
+      return;
+    }
+
     const newStudent = {
       sid: sid,
       sname: sname,
       scgpa: scgpa,
       sbacklogs: sbacklogs,
     };
-
     setStudents([...students, newStudent]);
-
     setSid("");
     setSname("");
     setScgpa("");
     setSbacklogs("");
   }
-
   return (
     <div>
       <AddStudent
@@ -50,10 +52,8 @@ function App() {
         setSbacklogs={setSbacklogs}
         addStudent={addStudent}
       />
-
       <DisplayStudents students={students} />
     </div>
   );
 }
-
 export default App;

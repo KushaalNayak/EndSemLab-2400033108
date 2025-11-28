@@ -1,5 +1,4 @@
-// import React from "react";
-
+import React from "react";
 function DisplayStudents({ students }) {
   return (
     <div>

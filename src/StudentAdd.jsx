@@ -1,4 +1,15 @@
-function AddStudent({ sid, setSid, sname, setSname, scgpa, setScgpa, sbacklogs, setSbacklogs, addStudent }) {
+import React from "react";
+function AddStudent({
+  sid,
+  setSid,
+  sname,
+  setSname,
+  scgpa,
+  setScgpa,
+  sbacklogs,
+  setSbacklogs,
+  addStudent,
+}) {
   return (
     <div>
       <h2>Add Student</h2>
@@ -10,7 +21,6 @@ function AddStudent({ sid, setSid, sname, setSname, scgpa, setScgpa, sbacklogs, 
           onChange={(e) => setSid(e.target.value)}
         />
       </div>
-
       <div>
         Student Name:
         <input
@@ -19,7 +29,6 @@ function AddStudent({ sid, setSid, sname, setSname, scgpa, setScgpa, sbacklogs, 
           onChange={(e) => setSname(e.target.value)}
         />
       </div>
-
       <div>
         Student CGPA:
         <input
@@ -28,7 +37,6 @@ function AddStudent({ sid, setSid, sname, setSname, scgpa, setScgpa, sbacklogs, 
           onChange={(e) => setScgpa(e.target.value)}
         />
       </div>
-
       <div>
         Student Backlogs:
         <input
@@ -37,7 +45,6 @@ function AddStudent({ sid, setSid, sname, setSname, scgpa, setScgpa, sbacklogs, 
           onChange={(e) => setSbacklogs(e.target.value)}
         />
       </div>
-
       <button onClick={addStudent}>Add</button>
     </div>
   );
